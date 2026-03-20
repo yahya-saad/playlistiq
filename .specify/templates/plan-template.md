@@ -23,8 +23,8 @@
 **Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
 **Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
 **Project Type**: [e.g., library/cli/web-service/mobile-app/compiler/desktop-app or NEEDS CLARIFICATION]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
+**Performance Goals**: [e.g., < 500ms TTI/Latency (Constitution MANDATORY)]  
+**Constraints**: [e.g., Zero unnecessary dependencies, < 200ms API p95, No database unless justified]  
 **Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
 
 ## Constitution Check
@@ -46,6 +46,17 @@ specs/[###-feature]/
 ├── contracts/           # Phase 1 output (/speckit.plan command)
 └── tasks.md             # Phase 2 output (/speckit.tasks command - NOT created by /speckit.plan)
 ```
+
+### Performance & Efficiency (Constitution MANDATORY)
+
+- **SC-P01**: User interaction latency MUST be < 500ms (Time to Interactive).
+- **SC-P02**: API response time MUST be < 200ms (p95) for all primary endpoints.
+- **SC-P03**: No new database dependencies unless strictly justified by relational complexity.
+
+### Measurable Outcomes
+
+- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
+- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 
 ### Source Code (repository root)
 <!--

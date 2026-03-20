@@ -107,9 +107,13 @@
   These must be technology-agnostic and measurable.
 -->
 
+### Performance & Efficiency (Constitution MANDATORY)
+
+- **SC-P01**: User interaction latency MUST be < 500ms (Time to Interactive).
+- **SC-P02**: API response time MUST be < 200ms (p95) for all primary endpoints.
+- **SC-P03**: No new database dependencies unless strictly justified by relational complexity.
+
 ### Measurable Outcomes
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-010**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
+- **SC-011**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]

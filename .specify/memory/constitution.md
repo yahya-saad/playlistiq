@@ -1,50 +1,53 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+SYNC IMPACT REPORT
+Version change: Template -> v1.1.0
+Modified principles:
+- [PRINCIPLE_1_NAME] -> I. Ultra Fast Response
+- [PRINCIPLE_2_NAME] -> II. Minimalist UI
+- [PRINCIPLE_3_NAME] -> III. Storage Discipline
+- [PRINCIPLE_4_NAME] -> IV. Aggressive Caching
+- [PRINCIPLE_5_NAME] -> V. Clean API Contracts & Simple Flows
+Added sections: None
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md (✅ updated)
+- .specify/templates/spec-template.md (✅ updated)
+- .specify/templates/tasks-template.md (✅ updated)
+Follow-up TODOs: None
+-->
+# Speckit Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Ultra Fast Response
+Target sub-500ms for all user interactions and API calls. Performance is a core requirement; any feature that compromises this target must be re-evaluated or optimized.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Minimalist UI
+Zero unnecessary dependencies. Use vanilla CSS and JS wherever possible. Every pixel and every byte must justify its existence. No UI bloat.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Storage Discipline
+No database unless strictly required. Favor ephemeral state, client-side storage, or flat files. If a database is used, it must be justified by complex relational requirements that cannot be solved simpler.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Aggressive Caching
+Cache external API responses aggressively to minimize latency and improve reliability. External dependency failures or delays should not degrade the core user experience whenever cached data can suffice.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Clean API Contracts & Simple Flows
+Predictable, strongly typed, and version-neutral interfaces. User flows must be linear and predictable with minimal friction. Avoid complex branching logic in UX.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Performance Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Latency Targets
+- API Response: < 200ms (p95)
+- Time to Interactive: < 500ms
+- Cache Hit Ratio: > 80% for external data
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Performance-First Review
+All Pull Requests must be evaluated for performance impact. If a change increases latency by more than 10%, it requires a performance justification or optimization.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices. Amendments require documentation in a Sync Impact Report, a version bump, and a migration plan for existing code if applicable.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2026-03-20 | **Last Amended**: 2026-03-20
