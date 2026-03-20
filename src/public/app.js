@@ -110,7 +110,7 @@ const calculatorData = () => ({
 
     copyResults() {
         if (!this.results) return;
-        let text = `PlaylistIQ – YouTube Playlist Summary\n`;
+        let text = `PlaylistIQ – YouTube Playlist Results\n`;
         text += `------------------------\n`;
         text += `Total Duration: ${this.formatSeconds(this.results.totalSeconds)}\n`;
         text += `At ${this.speed}x Speed: ${this.formatSeconds(this.results.totalSeconds / this.speed)}\n`;

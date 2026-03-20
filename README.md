@@ -9,6 +9,7 @@ Live: https://playlistiq.yahya-saad.dev
 ## Preview
 
 ![screenshot](./assets/01.png)
+![screenshot](./assets/02.png)
 
 ---
 
